@@ -1,14 +1,12 @@
 import Navbar from "@/components/Navbar";
-import Row from "@/components/Row";
+import Rows from "@/components/Rows";
 export default function Home({ data }) {
   return (
     <div>
       <Navbar />
-      <div className="flex flex-nowrap scroll-m-0 w-screen h-fit overflow-x-auto">
-        {data.results.map((obj, i) => (
-          <Row key={i} data={obj} />
-        ))}
-      </div>
+      {data?.map((result) => (
+        <Rows data={result} />
+      ))}
     </div>
   );
 }
