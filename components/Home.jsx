@@ -4,8 +4,8 @@ export default function Home({ data }) {
   return (
     <div>
       <Navbar />
-      {data?.map((result) => (
-        <Rows data={result} />
+      {data?.map((result, i) => (
+        <Rows key={i} data={result} />
       ))}
     </div>
   );

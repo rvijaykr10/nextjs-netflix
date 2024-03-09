@@ -32,7 +32,11 @@ const performMultipleAPICalls = async () => {
       fetchData(apiUrl3, options),
     ]);
 
-    return [apiResults[0], apiResults[1], apiResults[2]];
+    return [
+      { ...apiResults[0], title: "Trending Now" },
+      { ...apiResults[1], title: "Movies" },
+      { ...apiResults[2], title: "TV Shows" },
+    ];
   } catch (error) {
     // Handle errors from any of the API calls
     console.error("Error during API calls:", error);
