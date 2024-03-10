@@ -30,7 +30,7 @@ function getLogo() {
 
 export default function Navbar() {
   return (
-    <div className="py-6 h-20 w-screen bg-black flex float-left items-center sticky top-0">
+    <div className="py-6 h-20 w-screen bg-black flex flex-left items-center sticky top-0">
       <div className="pr-12">
         <Link href={"/"}>{getLogo()}</Link>
       </div>
@@ -39,13 +39,10 @@ export default function Navbar() {
           <Link href={"/"}>Home</Link>
         </li>
         <li className="pr-10 font-sans text-sm font-normal">
-          <Link href={"/tv-shows"}>TV Shows</Link>
-        </li>
-        <li className="pr-10 font-sans text-sm font-normal">
           <Link href={"/movies"}>Movies</Link>
         </li>
         <li className="pr-10 font-sans text-sm font-normal">
-          <Link href={"/new-popular"}>New & Popular</Link>
+          <Link href={"/tv-shows"}>TV Shows</Link>
         </li>
       </ul>
       <div />
