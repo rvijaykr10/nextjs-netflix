@@ -9,6 +9,7 @@ export default function Row({ data }) {
         src={`${BASE_IMAGE_URL}/w220_and_h330_face${data.poster_path}`}
         width={220}
         height={330}
+        alt={data?.original_title}
       />
     </>
   );

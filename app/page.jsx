@@ -45,6 +45,5 @@ const performMultipleAPICalls = async () => {
 
 export default async function page() {
   const data = await performMultipleAPICalls();
-  // console.log(data);
   return <Home data={data} />;
 }

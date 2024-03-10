@@ -6,7 +6,7 @@ export default function Rows({ data }) {
         {data.title}
       </div>
       <div className="flex flex-nowrap scroll-m-0 w-screen h-fit overflow-x-auto overflow-hidden">
-        {data.results.map((obj, i) => (
+        {data?.results?.map((obj, i) => (
           <Row key={i} data={obj} />
         ))}
       </div>
