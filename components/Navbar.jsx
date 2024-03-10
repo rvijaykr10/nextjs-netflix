@@ -1,4 +1,4 @@
-// navbar - Home, TV Shows, Movies, New & Popular, My List, Browse by Languages
+import Link from "next/link";
 function getLogo() {
   return (
     <svg
@@ -30,15 +30,25 @@ function getLogo() {
 
 export default function Navbar() {
   return (
-    <div className="px-16 py-6 h-20 w-screen bg-black flex float-left items-center">
-      <div className="pr-12">{getLogo()}</div>
+    <div className="py-6 h-20 w-screen bg-black flex float-left items-center sticky top-0">
+      <div className="pr-12">
+        <Link href={"/"}>{getLogo()}</Link>
+      </div>
       <ul className="text-white flex items-center h-full">
-        <li className="pr-10 font-sans text-sm font-normal">Home</li>
-        <li className="pr-10 font-sans text-sm font-normal">TV Shows</li>
-        <li className="pr-10 font-sans text-sm font-normal">Movies</li>
-        <li className="pr-10 font-sans text-sm font-normal">New & Popular</li>
+        <li className="pr-10 font-sans text-sm font-normal">
+          <Link href={"/"}>Home</Link>
+        </li>
+        <li className="pr-10 font-sans text-sm font-normal">
+          <Link href={"/tv-shows"}>TV Shows</Link>
+        </li>
+        <li className="pr-10 font-sans text-sm font-normal">
+          <Link href={"/movies"}>Movies</Link>
+        </li>
+        <li className="pr-10 font-sans text-sm font-normal">
+          <Link href={"/new-popular"}>New & Popular</Link>
+        </li>
       </ul>
-      <div>profile</div>
+      <div />
     </div>
   );
 }
