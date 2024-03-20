@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner";
 import Home from "@/components/Home";
 
 const fetchData = async (url, options) => {
@@ -44,6 +45,24 @@ const performMultipleAPICalls = async () => {
 };
 
 export default async function page() {
+  const { BASE_IMAGE_URL } = process.env;
   const data = await performMultipleAPICalls();
-  return <Home data={data} />;
+
+  function getRandomBanner() {
+    const total = data[0].results.length;
+    const randomIndex = Math.floor(Math.random() * total);
+    //
+    const randomBanner = data[0].results[randomIndex];
+    const imgPath = data[0].results[randomIndex].backdrop_path;
+    //
+    const bannerImgPath = `${BASE_IMAGE_URL}/original${imgPath}`;
+    return { bannerImgPath, randomBanner };
+  }
+
+  return (
+    <>
+      <Banner {...getRandomBanner()} />
+      <Home data={data} />
+    </>
+  );
 }
