@@ -30,18 +30,18 @@ function getLogo() {
 
 export default function Navbar() {
   return (
-    <div className="h-20 w-screen bg-black flex flex-left items-center">
-      <div className="pr-12">
+    <div className="h-20 w-auto bg-black flex flex-left items-center">
+      <div className="pr-6 sm:pr-12">
         <Link href={"/"}>{getLogo()}</Link>
       </div>
       <ul className="text-white flex items-center h-full">
-        <li className="pr-10 font-sans text-sm font-normal">
+        <li className="text-sm pr-0 sm:text-xs sm:pr-10 font-sans font-normal">
           <Link href={"/"}>Home</Link>
         </li>
-        <li className="pr-10 font-sans text-sm font-normal">
+        <li className="text-sm px-5 sm:text-xs sm:pr-10 sm:pl-0 font-sans font-normal">
           <Link href={"/movies"}>Movies</Link>
         </li>
-        <li className="pr-10 font-sans text-sm font-normal">
+        <li className="text-sm pr-0 sm:text-xs sm:pr-10 font-sans font-normal">
           <Link href={"/tv-shows"}>TV Shows</Link>
         </li>
       </ul>
