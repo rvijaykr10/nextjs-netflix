@@ -30,7 +30,7 @@ function getLogo() {
 
 export default function Navbar() {
   return (
-    <div className="h-20 w-screen bg-black flex flex-left items-center">
+    <div className="h-20 w-screen bg-black flex flex-left items-center z-10">
       <div className="pr-12">
         <Link href={"/"}>{getLogo()}</Link>
       </div>
