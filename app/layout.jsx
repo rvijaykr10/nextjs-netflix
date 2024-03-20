@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-black">
-        <header className="sticky top-0">
+        <header className="sticky top-0 z-10">
           <Navbar />
         </header>
         <main>{children}</main>
