@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Banner({ bannerImgPath, randomBanner }) {
   return (
-    <div className="relative bg-black h-96">
+    <div className="relative bg-black h-96 mb-7">
       <Image
         src={bannerImgPath}
         alt="Banner Image"
