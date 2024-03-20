@@ -23,7 +23,7 @@ export default function Banner({ bannerImgPath, randomBanner }) {
               randomBanner.title ||
               randomBanner.original_name}
           </div>
-          <div className="font-sans text-white w-1/2">
+          <div className="text-xs sm:text-sm font-sans text-white w-1/2">
             {randomBanner.overview}
           </div>
         </div>

@@ -35,13 +35,13 @@ export default function Navbar() {
         <Link href={"/"}>{getLogo()}</Link>
       </div>
       <ul className="text-white flex items-center h-full">
-        <li className="text-sm pr-0 sm:text-xs sm:pr-10 font-sans font-normal">
+        <li className="text-xs pr-0 sm:text-sm sm:pr-10 font-sans font-normal">
           <Link href={"/"}>Home</Link>
         </li>
-        <li className="text-sm px-5 sm:text-xs sm:pr-10 sm:pl-0 font-sans font-normal">
+        <li className="text-xs px-5 sm:text-sm sm:pr-10 sm:pl-0 font-sans font-normal">
           <Link href={"/movies"}>Movies</Link>
         </li>
-        <li className="text-sm pr-0 sm:text-xs sm:pr-10 font-sans font-normal">
+        <li className="text-xs pr-0 sm:text-sm sm:pr-10 font-sans font-normal">
           <Link href={"/tv-shows"}>TV Shows</Link>
         </li>
       </ul>
