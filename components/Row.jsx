@@ -12,6 +12,7 @@ export default function Row({ data }) {
         alt={
           data.name || data.original_title || data.title || data.original_name
         }
+        priority
       />
     </>
   );
