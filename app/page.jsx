@@ -22,6 +22,7 @@ const performMultipleAPICalls = async () => {
         accept: "application/json",
         Authorization: `Bearer ${ACCESS_TOKEN}`,
       },
+      cache: "no-store",
     };
     const apiUrl1 = `${BASE_URL}/trending/all/day?language=en-US`;
     const apiUrl2 = `${BASE_URL}/trending/movie/day?language=en-US`;
