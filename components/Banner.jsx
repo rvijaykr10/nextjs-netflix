@@ -15,7 +15,7 @@ export default function Banner({ bannerImgPath, randomBanner }) {
         }}
         priority
       />
-      <div className="absolute inset-0 bg-black opacity-75">
+      <div className="absolute inset-0 bg-black opacity-50">
         <div className="pl-2 pt-2">
           <div className="text-white font-medium font-sans text-3xl">
             {randomBanner.name ||
