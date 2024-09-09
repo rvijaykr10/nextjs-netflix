@@ -9,11 +9,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black mx-2 overflow-x-hidden">
+      <body className="bg-black mx-2 overflow-x-hidden main-content">
         <header className="sticky top-0 z-10">
           <Navbar />
         </header>
-        <main className="main-content">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
