@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
         <header className="sticky top-0 z-10">
           <Navbar />
         </header>
-        <main>{children}</main>
+        <main className="main-content">{children}</main>
       </body>
     </html>
   );
